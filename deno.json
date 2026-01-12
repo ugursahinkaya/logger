@@ -1,0 +1,46 @@
+{
+    "$schema": "https://deno.land/x/deno/cli/schemas/config-file.v1.json",
+    "name": "@mecra/logger",
+    "version": "2.1.0",
+    "description": "Lightweight, cross-platform logger with colored output for Deno, Node.js, and browsers",
+    "license": "(GPL-3.0-only OR LicenseRef-Commercial)",
+    "exports": "./mod.ts",
+    "publish": {
+        "include": [
+            "mod.ts",
+            "types.ts",
+            "deno.json",
+            "README.md",
+            "LICENSE"
+        ]
+    },
+    "tasks": {
+        "test": "deno test -A",
+        "check": "deno check mod.ts",
+        "fmt": "deno fmt",
+        "lint": "deno lint"
+    },
+    "fmt": {
+        "useTabs": false,
+        "lineWidth": 100,
+        "indentWidth": 2,
+        "semiColons": true,
+        "singleQuote": false,
+        "proseWrap": "preserve"
+    },
+    "lint": {
+        "rules": {
+            "tags": [
+                "recommended"
+            ]
+        }
+    },
+    "compilerOptions": {
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "deno.ns"
+        ],
+        "strict": true
+    }
+}
